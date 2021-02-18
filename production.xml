@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!-- This file is part of Tryton.  The COPYRIGHT file at the top level of
+this repository contains the full copyright notices and license terms. -->
+<tryton>
+    <data>
+        <!-- production -->
+        <record model="ir.ui.view" id="production_view_form">
+            <field name="model">production</field>
+            <field name="inherit" ref="production.production_view_form"/>
+            <field name="name">production_form</field>
+        </record>
+
+        <record model="ir.model.button" id="reset_wizard_button">
+            <field name="name">reset_wizard</field>
+            <field name="string">Reset</field>
+            <field name="model" search="[('model', '=', 'production')]"/>
+        </record>
+        <record model="ir.model.button-res.group" id="reset_wizard_button_group_project">
+            <field name="button" ref="production_reset.reset_wizard_button"/>
+            <field name="group" ref="stock.group_stock_force_assignment"/>
+        </record>
+    </data>
+</tryton>

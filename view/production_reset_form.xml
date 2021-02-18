@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!-- This file is part of Tryton.  The COPYRIGHT file at the top level of
+this repository contains the full copyright notices and license terms. -->
+<form>
+    <label name="request_date"/>
+    <field name="request_date"/>
+    <label name="name"/>
+    <field name="name"/>
+    <newline/>
+    <separator name="description" colspan="6"/>
+    <field name="description" colspan="6"/>
+    <newline/>
+    <notebook>
+        <page name="moves">
+            <field name="moves"/>
+        </page>
+    </notebook>
+</form>

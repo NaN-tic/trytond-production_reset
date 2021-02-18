@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!-- This file is part of Tryton.  The COPYRIGHT file at the top level of
+this repository contains the full copyright notices and license terms. -->
+<tryton>
+    <data depends="production_operation">
+        <record model="ir.ui.view" id="production_operation_reset_form_view">
+            <field name="model">production.reset</field>
+            <field name="inherit" ref="production_reset_form_view"/>
+            <field name="name">production_operation_reset_form</field>
+        </record>
+
+
+        <record model="ir.ui.view" id="production_operation_reset_start">
+            <field name="model">production.reset.wizard.start</field>
+            <field name="inherit" ref="production_reset_start"/>
+            <field name="name">production_operation_reset_start</field>
+        </record>
+    </data>
+</tryton>
