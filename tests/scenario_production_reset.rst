@@ -167,6 +167,7 @@ Reset the production::
     True
     >>> reset.form.name = 'Reset Production 1'
     >>> reset.form.description = 'Reset Production 1'
+    >>> reset.execute('confirm')
     >>> reset.execute('reset')
     >>> production.state == 'draft'
     True

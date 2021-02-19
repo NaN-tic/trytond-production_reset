@@ -1,4 +1,4 @@
-from trytond.model import ModelSQL, ModelView, fields
+from trytond.model import ModelView, fields
 from trytond.pool import  PoolMeta
 from trytond.pyson import Eval, Id
 
@@ -7,6 +7,8 @@ __all__ = ['Production']
 
 class Production(metaclass=PoolMeta):
     __name__ = 'production'
+    production_resets = fields.One2Many('production.reset', 'production',
+        'Production Resets')
 
     @classmethod
     def __setup__(cls):

@@ -2,10 +2,18 @@
 <!-- This file is part esale_product module for Tryton.
 The COPYRIGHT file at the top level of this repository contains the full copyright notices and license terms. -->
 <form>
+    <image name="tryton-info" xexpand="0" xfill="0"/>
+    <group col="1" id="labels">
+        <label string="Are you sure to confirm?" id="confirm" yalign="0.0" xalign="0.0" xexpand="1"/>
+        <label string="Cancel moves and create new moves." id="info" yalign="0.0" xalign="0.0" xexpand="1"/>
+        <label string="This is a dangerous operation and you need to confirm that you are agree to cancel moves and create new moves." id="dangerous" yalign="0.0" xalign="0.0" xexpand="1"/>
+    </group>
+    <newline/>
     <label name="name"/>
     <field name="name"/>
     <separator name="description" colspan="6"/>
     <field name="description" colspan="6"/>
     <separator name="moves" colspan="6"/>
     <field name="moves" colspan="6"/>
+    <field name="confirmed" colspan="6" invisible="1"/>
 </form>

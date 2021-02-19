@@ -19,5 +19,24 @@ this repository contains the full copyright notices and license terms. -->
             <field name="button" ref="production_reset.reset_wizard_button"/>
             <field name="group" ref="stock.group_stock_force_assignment"/>
         </record>
+
+        <record model="ir.action.act_window" id="act_production_reset_form2">
+            <field name="name">Production Resets</field>
+            <field name="res_model">production.reset</field>
+            <field name="domain"
+                eval="[If(Eval('active_ids', []) == [Eval('active_id')], ('production', '=', Eval('active_id')), ('production', 'in', Eval('active_ids')))]"
+                pyson="1"/>
+        </record>
+        <record model="ir.action.keyword" id="act_open_production_reset_keyword1">
+            <field name="keyword">form_relate</field>
+            <field name="model">production,-1</field>
+            <field name="action" ref="act_production_reset_form2"/>
+        </record>
+        <record model="ir.action-res.group" id="act_production_reset_form2-group_stock_force_assignment">
+            <field name="action" ref="act_production_reset_form2"/>
+            <field name="group" ref="stock.group_stock_force_assignment"/>
+        </record>
+
+
     </data>
 </tryton>
