@@ -124,7 +124,7 @@ msgstr "Reinicia"
 
 msgctxt "wizard_button:production.reset.wizard,start,confirm:"
 msgid "Confirm"
-msgstr "Confirmaca"
+msgstr "Confirma"
 
 msgctxt "wizard_button:production.reset.wizard,start,end:"
 msgid "Cancel"
