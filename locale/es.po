@@ -1,0 +1,131 @@
+#
+msgid ""
+msgstr "Content-Type: text/plain; charset=utf-8\n"
+
+msgctxt "field:production,production_resets:"
+msgid "Production Resets"
+msgstr "Reinicio producciones"
+
+msgctxt "field:production.reset,create_date:"
+msgid "Create Date"
+msgstr "Fecha de creación"
+
+msgctxt "field:production.reset,create_uid:"
+msgid "Create User"
+msgstr "Usuario de creación"
+
+msgctxt "field:production.reset,description:"
+msgid "Description"
+msgstr "Descripción"
+
+msgctxt "field:production.reset,id:"
+msgid "ID"
+msgstr "ID"
+
+msgctxt "field:production.reset,moves:"
+msgid "Moves"
+msgstr "Movimientos"
+
+msgctxt "field:production.reset,name:"
+msgid "Reason"
+msgstr "Razón"
+
+msgctxt "field:production.reset,production:"
+msgid "Production"
+msgstr "Producción"
+
+msgctxt "field:production.reset,rec_name:"
+msgid "Record Name"
+msgstr "Nombre del registro"
+
+msgctxt "field:production.reset,request_date:"
+msgid "Request Date"
+msgstr "Fecha solicitud"
+
+msgctxt "field:production.reset,write_date:"
+msgid "Write Date"
+msgstr "Fecha de modificación"
+
+msgctxt "field:production.reset,write_uid:"
+msgid "Write User"
+msgstr "Usuario de modificación"
+
+msgctxt "field:production.reset.wizard.start,confirmed:"
+msgid "Confirmed"
+msgstr "Confirmación"
+
+msgctxt "field:production.reset.wizard.start,description:"
+msgid "Description"
+msgstr "Descripción"
+
+msgctxt "field:production.reset.wizard.start,id:"
+msgid "ID"
+msgstr "ID"
+
+msgctxt "field:production.reset.wizard.start,moves:"
+msgid "Moves"
+msgstr "Movimientos"
+
+msgctxt "field:production.reset.wizard.start,name:"
+msgid "Reason"
+msgstr "Razón"
+
+msgctxt "model:ir.action,name:act_production_reset_form"
+msgid "Poduction Resets"
+msgstr "Reinicio producciones"
+
+msgctxt "model:ir.action,name:act_production_reset_form2"
+msgid "Production Resets"
+msgstr "Reinicio producciones"
+
+msgctxt "model:ir.action,name:act_production_reset_wizard"
+msgid "Production Reset"
+msgstr "Reinicio producción"
+
+msgctxt "model:ir.model.button,string:reset_wizard_button"
+msgid "Reset"
+msgstr "Reiniciar"
+
+msgctxt "model:ir.ui.menu,name:menu_production_reset_form"
+msgid "Poduction Resets"
+msgstr "Reinicio producciones"
+
+msgctxt "model:production.reset,name:"
+msgid "Production Reset"
+msgstr "Reinicio producción"
+
+msgctxt "model:production.reset.wizard.start,name:"
+msgid "Production Reset Start"
+msgstr "Reinicio producción - Inicio"
+
+msgctxt "view:production.reset.wizard.start:"
+msgid "Are you sure to confirm?"
+msgstr "Estás seguro de confirmar?"
+
+msgctxt "view:production.reset.wizard.start:"
+msgid "Cancel moves and create new moves."
+msgstr "Cancelar movimientos y crear de nuevos."
+
+msgctxt "view:production.reset.wizard.start:"
+msgid ""
+"This is a dangerous operation and you need to confirm that you are agree to "
+"cancel moves and create new moves."
+msgstr ""
+"Esta acción es peligrosa y se requiere confirmación que desea cancelar "
+"movimientos y crear de nuevos."
+
+msgctxt "wizard_button:production.reset.wizard,confirm,end:"
+msgid "Cancel"
+msgstr "Cancelar"
+
+msgctxt "wizard_button:production.reset.wizard,confirm,reset:"
+msgid "Reset"
+msgstr "Reiniciar"
+
+msgctxt "wizard_button:production.reset.wizard,start,confirm:"
+msgid "Confirm"
+msgstr "Confirmar"
+
+msgctxt "wizard_button:production.reset.wizard,start,end:"
+msgid "Cancel"
+msgstr "Cancelar"
