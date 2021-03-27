@@ -1,7 +1,5 @@
-from trytond.model import ModelSQL, ModelView, fields
+from trytond.model import fields
 from trytond.pool import  PoolMeta
-
-__all__ = ['Operation']
 
 
 class Operation(metaclass=PoolMeta):

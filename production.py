@@ -2,8 +2,6 @@ from trytond.model import ModelView, fields
 from trytond.pool import  PoolMeta
 from trytond.pyson import Eval, Id
 
-__all__ = ['Production']
-
 
 class Production(metaclass=PoolMeta):
     __name__ = 'production'

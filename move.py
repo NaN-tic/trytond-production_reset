@@ -1,7 +1,4 @@
-from trytond.model import ModelSQL, ModelView, fields
 from trytond.pool import  PoolMeta
-
-__all__ = ['Move']
 
 
 class Move(metaclass=PoolMeta):

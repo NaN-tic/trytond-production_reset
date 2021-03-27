@@ -4,8 +4,6 @@ from trytond.wizard import Wizard, StateTransition, StateView, Button
 from trytond.transaction import Transaction
 from trytond.pyson import Bool, Eval
 
-__all__ = ['ProductionReset', 'ProductionResetWizardStart', 'ProductionResetWizard']
-
 
 class ProductionReset(ModelSQL, ModelView):
     '''Production Reset'''
@@ -20,7 +18,7 @@ class ProductionReset(ModelSQL, ModelView):
     def __setup__(cls):
         super(ProductionReset, cls).__setup__()
         try:
-            Operation = Pool().get('production.operation')
+            Pool().get('production.operation')
             cls.operations = fields.One2Many('production.operation',
                 'production_reset', 'Operations')
         except KeyError:
@@ -47,7 +45,7 @@ class ProductionResetWizardStart(ModelView):
     def __setup__(cls):
         super(ProductionResetWizardStart, cls).__setup__()
         try:
-            Operation = Pool().get('production.operation')
+            Pool().get('production.operation')
             cls.operations = fields.One2Many('production.operation',
                 None, 'Operations', readonly=True)
         except KeyError:
