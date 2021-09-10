@@ -171,11 +171,11 @@ Reset the production::
     >>> reset.execute('reset')
     >>> production.state == 'draft'
     True
-    >>> len([input for input in production.inputs if input.state == 'cancel'])
+    >>> len([input for input in production.inputs if input.state == 'cancelled'])
     2
     >>> len([input for input in production.inputs if input.state == 'draft'])
     2
-    >>> len([output for output in production.outputs if output.state == 'cancel'])
+    >>> len([output for output in production.outputs if output.state == 'cancelled'])
     1
     >>> len([output for output in production.outputs if output.state == 'draft'])
     1
