@@ -154,7 +154,7 @@ class ProductionResetWizard(Wizard):
             sql_where = (move_h.id.in_(move_ids))
             cursor.execute(*move_h.update(
                 columns=[move_h.state, move_h.origin],
-                values=['cancel', '%s,%s' % (Reset.__name__, reset.id)],
+                values=['cancelled', '%s,%s' % (Reset.__name__, reset.id)],
                 where=sql_where))
 
         # reset operations
@@ -163,7 +163,7 @@ class ProductionResetWizard(Wizard):
             sql_where = (operation_h.id.in_(operation_ids))
             cursor.execute(*operation_h.update(
                 columns=[operation_h.state, operation_h.production_reset],
-                values=['cancel', reset.id],
+                values=['cancelled', reset.id],
                 where=sql_where))
 
         return 'end'
