@@ -9,6 +9,7 @@ from trytond.tests.test_tryton import ModuleTestCase
 class ProductionResetTestCase(CompanyTestMixin, ModuleTestCase):
     'Test ProductionReset module'
     module = 'production_reset'
+    extras = ['production_operation']
 
 
 del ModuleTestCase
