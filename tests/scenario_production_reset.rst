@@ -18,7 +18,7 @@ Imports::
 
 Install production Module::
 
-    >>> config = activate_modules('production_reset')
+    >>> config = activate_modules(['production_reset', 'production_operation'])
 
 Create company::
 
