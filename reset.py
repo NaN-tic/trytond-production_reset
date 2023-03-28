@@ -110,8 +110,6 @@ class ProductionResetWizard(Wizard):
         Move = pool.get('stock.move')
         Reset = pool.get('production.reset')
         Date_ = pool.get('ir.date')
-        RecomputeCostPrice = pool.get('product.recompute_cost_price',
-            type='wizard')
 
         try:
             Operation = Pool().get('production.operation')
@@ -160,15 +158,13 @@ class ProductionResetWizard(Wizard):
                 values=['cancelled', '%s,%s' % (Reset.__name__, reset.id)],
                 where=sql_where))
 
-            products = [m.product for m in self.confirm.moves]
+            products = set([m.product for m in self.confirm.moves])
+            date = min([m.effective_date or today for m in self.confirm.moves]
+                + [production.effective_date or today])
 
-            session_id, _, _ = RecomputeCostPrice.create()
-            recompute_cost_price = RecomputeCostPrice(session_id)
-            recompute_cost_price.model = Product
-            recompute_cost_price.records = products
-            default_values = recompute_cost_price.default_start({})
-            recompute_cost_price.start.from_ = default_values['from_']
-            recompute_cost_price.transition_recompute()
+            with Transaction().set_context(queue_name='production'):
+                for product in products:
+                    Product.__queue__.recompute_cost_price([product], start=date)
 
         # reset operations
         if operation_ids:
