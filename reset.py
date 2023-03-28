@@ -105,6 +105,7 @@ class ProductionResetWizard(Wizard):
 
     def transition_reset(self):
         pool = Pool()
+        Product = pool.get('product.product')
         Production = pool.get('production')
         Move = pool.get('stock.move')
         Reset = pool.get('production.reset')
@@ -156,6 +157,13 @@ class ProductionResetWizard(Wizard):
                 columns=[move_h.state, move_h.origin],
                 values=['cancelled', '%s,%s' % (Reset.__name__, reset.id)],
                 where=sql_where))
+
+            products = set([m.product for m in self.confirm.moves])
+            date = min([m.effective_date or today for m in self.confirm.moves]
+                + [production.effective_date or today])
+
+            for product in products:
+                Product.__queue__.recompute_cost_price([product], start=date)
 
         # reset operations
         if operation_ids:
