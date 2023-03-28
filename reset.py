@@ -162,9 +162,8 @@ class ProductionResetWizard(Wizard):
             date = min([m.effective_date or today for m in self.confirm.moves]
                 + [production.effective_date or today])
 
-            with Transaction().set_context(queue_name='production'):
-                for product in products:
-                    Product.__queue__.recompute_cost_price([product], start=date)
+            for product in products:
+                Product.__queue__.recompute_cost_price([product], start=date)
 
         # reset operations
         if operation_ids:
