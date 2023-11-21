@@ -162,6 +162,13 @@ class ProductionResetWizard(Wizard):
             date = min([m.effective_date or today for m in self.confirm.moves]
                 + [production.effective_date or today])
 
+            has_fifo = hasattr(Move, 'fifo_quantity')
+            if has_fifo:
+                cursor.execute(*move_h.update(
+                    columns=[move_h.fifo_quantity],
+                    values=[Move.default_fifo_quantity()],
+                    where=sql_where))
+
             for product in products:
                 Product.__queue__.recompute_cost_price([product], start=date)
 
