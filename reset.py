@@ -34,10 +34,10 @@ class ProductionResetWizardStart(ModelView):
     __name__ = 'production.reset.wizard.start'
     name = fields.Char('Reason', required=True, states={
             'readonly': Eval('confirmed', True),
-        }, depends=['confirmed'])
+        })
     description = fields.Text('Description', required=True, states={
             'readonly': Eval('confirmed', True),
-        }, depends=['confirmed'])
+        })
     moves = fields.One2Many('stock.move', None, 'Moves', readonly=True)
     confirmed = fields.Boolean('Confirmed', readonly=True)
 
