@@ -13,7 +13,7 @@ this repository contains the full copyright notices and license terms. -->
         <record model="ir.model.button" id="reset_wizard_button">
             <field name="name">reset_wizard</field>
             <field name="string">Reset</field>
-            <field name="model" search="[('model', '=', 'production')]"/>
+            <field name="model">production</field>
         </record>
         <record model="ir.model.button-res.group" id="reset_wizard_button_group_project">
             <field name="button" ref="production_reset.reset_wizard_button"/>
