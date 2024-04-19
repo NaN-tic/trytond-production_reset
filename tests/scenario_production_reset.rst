@@ -153,7 +153,7 @@ Do the production::
     True
     >>> len(set(i.effective_date == today for i in production.inputs))
     1
-    >>> production.click('done')
+    >>> production.click('do')
     >>> output, = production.outputs
     >>> output.state
     'done'
