@@ -62,4 +62,10 @@ this repository contains the full copyright notices and license terms. -->
             <field name="name">production_reset_start</field>
         </record>
     </data>
+    <data>
+        <record model="ir.action-res.group" id="production_reset_group_stock_force_assignment">
+            <field name="action" ref="act_production_reset_wizard"/>
+            <field name="group" ref="stock.group_stock_force_assignment"/>
+        </record>
+    </data>
 </tryton>
